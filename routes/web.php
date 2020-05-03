@@ -35,3 +35,7 @@ Route::get('/explore/{id}/unfollow', 'ExploreController@unfollow')->middleware('
 Route::get('/profile/edit', 'ProfileController@edit')->middleware('auth');
 Route::post('/profile/edit', 'ProfileController@update')->middleware('auth');
 Route::get('/profile/{username}', 'ProfileController@index')->middleware('auth');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

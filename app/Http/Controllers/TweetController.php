@@ -11,6 +11,7 @@ class TweetController extends Controller
 {
     public function index()
     {
+        // dd("test tweet");
         $tweets = Tweet::orderBy('id', 'desc')->get();
         return view('tweet', compact('tweets'));
     }
