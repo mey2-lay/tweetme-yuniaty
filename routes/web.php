@@ -27,6 +27,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/tweet', 'TweetController@index')->middleware('auth');
 Route::post('/tweet', 'TweetController@tweet')->middleware('auth');
+Route::post('/tweet', 'TweetController@like')->middleware('auth');
+Route::post('/tweet', 'TweetController@unlike')->middleware('auth');
 
 Route::get('/explore', 'ExploreController@index')->middleware('auth');
 Route::get('/explore/{id}', 'ExploreController@follow')->middleware('auth');

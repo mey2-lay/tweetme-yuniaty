@@ -22,11 +22,11 @@
             <a href="/tweet" style="font-size:30px; margin-bottom:100px"><i class="fab fa-twitter"></i></a>
             <div class="list-group h5 my-2">    
                 <a href="/tweet" class="@if(Request::is('tweet')) active @endif list-group-item list-group-item-action">
-                <i class="fas fa-house-user"></i> Home
+                <i class="fas fa-house-user"></i> &nbsp; Home
                 </a>
-                <a href="/explore" class="@if(Request::is('explore')) active @endif list-group-item list-group-item-action"><i class="fas fa-hashtag"></i> Explore</a>
-                <a href="/profile/{{ Auth::user()->username }}" class="@if(Request::is('profile*')) active @endif list-group-item list-group-item-action"><i class="fas fa-user-alt"></i> Profile</a>
-                <a href="/logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="list-group-item list-group-item-action"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                <a href="/explore" class="@if(Request::is('explore')) active @endif list-group-item list-group-item-action"><i class="fas fa-hashtag"></i> &nbsp; Explore</a>
+                <a href="/profile/{{ Auth::user()->username }}" class="@if(Request::is('profile*')) active @endif list-group-item list-group-item-action"><i class="fas fa-user-alt"></i> &nbsp; Profile</a>
+                <a href="/logout" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="list-group-item list-group-item-action"><i class="fas fa-sign-out-alt"></i> &nbsp; Logout</a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
                 </form>
