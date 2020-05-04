@@ -1,20 +1,20 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-7">
+    <!-- <div class="row">
+        <div class="col-md-7"> -->
             <div class="twPc-div mb-5">
                 <a class="twPc-bg twPc-block"></a>
 
                 <div>
                     <div class="twPc-button">
                         @if($user->id == Auth::id())
-                            <a href="/profile/edit" class="btn btn-primary btn-sm">Edit</a>
+                            <a href="/profile/edit" class="btn btn-outline-primary rounded-pill btn-sm">Edit Profile</a>
                         @else
                             @if(in_array($user->id, $followingIds))
-                                <a href="/explore/{{ $user->id }}/unfollow" class="btn btn-danger btn-sm">Unfollow</a>
+                                <a href="/explore/{{ $user->id }}/unfollow" class="btn btn-danger rounded-pill btn-sm">Unfollow</a>
                             @else
-                                <a href="/explore/{{ $user->id }}" class="btn btn-primary btn-sm">Follow</a>
+                                <a href="/explore/{{ $user->id }}" class="btn btn-outline-primary rounded-pill btn-sm">Follow</a>
                             @endif
                         @endif
                     </div>
@@ -75,6 +75,6 @@
                 </div>
                 <hr>
             @endforeach
-        </div>
-    </div>
+        <!-- </div>
+    </div> -->
 @endsection

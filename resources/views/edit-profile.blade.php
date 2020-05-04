@@ -26,7 +26,7 @@
                     <input type="file" name="cover" class="form-control">
                 </div>
 
-                <button class="btn btn-primary px-5">Save</button>
+                <button class="btn btn-primary px-5 mt-3">Save</button>
             </form>
         </div>
     </div>

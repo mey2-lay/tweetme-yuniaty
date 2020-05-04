@@ -1,13 +1,14 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="row">
-        <div class="col-md-7">
+    <!-- <div class="row">
+        <div class="col-md-7"> -->
+        <div class="mt-2">
             @foreach($users as $user)
                 @if(in_array($user->id, $followingIds))
-                    <a href="/explore/{{ $user->id }}/unfollow" class="btn btn-danger btn-sm float-right">Unfollow</a>
+                    <a href="/explore/{{ $user->id }}/unfollow" class="btn btn-danger rounded-pill px-3 btn-sm float-right">Unfollow</a>
                 @else
-                    <a href="/explore/{{ $user->id }}" class="btn btn-primary btn-sm float-right">Follow</a>
+                    <a href="/explore/{{ $user->id }}" class="btn btn-outline-primary rounded-pill px-3 btn-sm float-right">Follow</a>
                 @endif
 
                 <div class="media">
@@ -23,5 +24,6 @@
                 <hr>
             @endforeach
         </div>
-    </div>
+        <!-- </div>
+    </div> -->
 @endsection
